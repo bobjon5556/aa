@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\kimjoohyen\\whatisprogram\\whatisprogram\\whatisprogram.csproj": {}
+    "C:\\Users\\me\\coding\\whatisprogram\\whatisprogram\\whatisprogram.csproj": {}
   },
   "projects": {
-    "D:\\kimjoohyen\\whatisprogram\\whatisprogram\\whatisprogram.csproj": {
+    "C:\\Users\\me\\coding\\whatisprogram\\whatisprogram\\whatisprogram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\kimjoohyen\\whatisprogram\\whatisprogram\\whatisprogram.csproj",
+        "projectUniqueName": "C:\\Users\\me\\coding\\whatisprogram\\whatisprogram\\whatisprogram.csproj",
         "projectName": "whatisprogram",
-        "projectPath": "D:\\kimjoohyen\\whatisprogram\\whatisprogram\\whatisprogram.csproj",
-        "packagesPath": "C:\\Users\\KGA_16\\.nuget\\packages\\",
-        "outputPath": "D:\\kimjoohyen\\whatisprogram\\whatisprogram\\obj\\",
+        "projectPath": "C:\\Users\\me\\coding\\whatisprogram\\whatisprogram\\whatisprogram.csproj",
+        "packagesPath": "C:\\Users\\me\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\me\\coding\\whatisprogram\\whatisprogram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\KGA_16\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\me\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

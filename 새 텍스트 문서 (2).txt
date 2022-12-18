@@ -1,0 +1,12 @@
+static void main(string[] args);
+{
+    Console.WriteLine("원의반지름:");
+    double r = double.Parse(Console.ReadLine());
+    Console.WriteLine("둘레=" + 2 * Math.PI * r + ", 넓이=" + Math.PI * r * r);
+
+}
+
+
+
+Console.WriteLine("둘레=" + 2 * Math.PI * i + ", 넓이=" + Math.PI * i);
+Console.WriteLine("구의 부피="+ 2 * Math.PI * i);
