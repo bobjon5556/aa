@@ -185,7 +185,7 @@
              * 문자열 리터럴:큰 따옴표로 묶어서 표현한다 ex)"hello"
              * 
              * 
-             * 숫자 구\분자 사용
+             * 숫자 구분자 사용
              * C#7.0버전부터는 언더스코어(_)문자를 사용하는 숫자 구분자(Digit separator)를 제공한다.
              * 숫자 형식을 표현할 때 언더스코어 문자는 무시한다. 이를 이용하면 긴 숫자를 표시할 때 가독성을 높일 수 있다.
              * 
@@ -207,14 +207,7 @@
              * 
              */
 
-            int number = default;
-            string stringvalue = default;
-            char charvalue = default;
-            float floatvalue = default;
-
-            var autovaribleint = 10;
-            var autovaribleFloat = 3.14f;
-            var autovaribledoubleint = 3.14;
+            
 
 
             static void main(string[] args)

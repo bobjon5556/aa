@@ -13,3 +13,11 @@ D:\kimjoohyen\whatisprogram\whatisprogram\obj\Debug\net6.0\refint\whatisprogram.
 D:\kimjoohyen\whatisprogram\whatisprogram\obj\Debug\net6.0\whatisprogram.pdb
 D:\kimjoohyen\whatisprogram\whatisprogram\obj\Debug\net6.0\whatisprogram.genruntimeconfig.cache
 D:\kimjoohyen\whatisprogram\whatisprogram\obj\Debug\net6.0\ref\whatisprogram.dll
+C:\Users\me\coding\whatisprogram\whatisprogram\obj\Debug\net6.0\whatisprogram.csproj.AssemblyReference.cache
+C:\Users\me\coding\whatisprogram\whatisprogram\obj\Debug\net6.0\whatisprogram.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\me\coding\whatisprogram\whatisprogram\obj\Debug\net6.0\whatisprogram.AssemblyInfoInputs.cache
+C:\Users\me\coding\whatisprogram\whatisprogram\obj\Debug\net6.0\whatisprogram.AssemblyInfo.cs
+C:\Users\me\coding\whatisprogram\whatisprogram\obj\Debug\net6.0\whatisprogram.csproj.CoreCompileInputs.cache
+C:\Users\me\coding\whatisprogram\whatisprogram\obj\Debug\net6.0\whatisprogram.dll
+C:\Users\me\coding\whatisprogram\whatisprogram\obj\Debug\net6.0\refint\whatisprogram.dll
+C:\Users\me\coding\whatisprogram\whatisprogram\obj\Debug\net6.0\whatisprogram.pdb
