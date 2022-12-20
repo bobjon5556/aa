@@ -342,23 +342,82 @@ namespace test4
 
             */
 
-            Console.WriteLine("숫자를 입력해 주세요");
+            /*
+             * foreach 문은 배역(array)이나 컬렉션(collection)같은 값을 여러 개 담고 있는 데이터 구조에서 각각의 데이터가 들어있는 만큼 반복하는 반복문이다.
+             * 데이터 개수나 반복 조건을 처리할 필요가 없다.
+             * */
 
-            string line = Console.ReadLine();
+            //string 에서 글자를 하나씩 출력
+            /*
+            string stringText = "Hello world!";
 
-            int.Parse(line);
+            int loopcount = 0;
+            foreach(char oneCharactor in stringText)
 
-            Console.WriteLine("입력한 수식"+(line+222));
+            { Console.Write("{0}", oneCharactor);
+                loopcount++;
+
+
+                Console.WriteLine();
+                Console.WriteLine("Loop count: {0}, stringText's length");
+                
+
+            */
+
+
+
+            /*
+                    //[1] Input
+                    int a = 0;
+
+                    //[2] Process
+                    
+                    int i = 1;      // 초기식
+                    while (i <= 100)     // 조건식
+                    {
+                        if (i % 3 == 0 || i % 4 == 0)   // 필터링(조건처리)
+                        {
+                            a += i;    // 실행문
+                        }
+                        i++;    // 증감식
+                    }
+                    
+                    //[3] Output
+                    Console.WriteLine(a);
+                
+            */
+
+
+            for (int i = 2; i <= 9; i++)
+            {
+                Console.WriteLine("{0}단\n", i);
+
+                for (int j = 1; j <= 9; j++)
+                {
+
+                    if ( i<j )
+                    continue;
+
+                    Console.WriteLine("{0} * {1} = {2}", i, j, i * j);
+                }
+
+                Console.WriteLine();
+            }
+
+            Console.ReadKey();
+
 
 
         }
-
-
-
-
-
-
-    }
+    }   
 }
+
+
+
+
+
+
+    
+
             
  

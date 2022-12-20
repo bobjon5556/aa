@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 
 namespace baekjoon
 {
@@ -6,54 +7,33 @@ namespace baekjoon
     {
         static void Main(string[] args)
         {
-            Random rand = new Random();
+            int aa = 0;//모음
+            int bb = 0;//자음
+            int cc = 0;
 
-            int num1, num2;
-            int num3, secretNumber;
+            Console.WriteLine("영문자를 입력");
+            string input = Console.ReadLine();
+            int input2 = Int32.Parse(input);
 
-            secretNumber = rand.Next(1,100);
-
-
-            for (int i = 0; i < 7; ++i)
+            while (true)
             {
-                Console.Write("숫자를 입력하세요: ");
-                int num4 = int.Parse(Console.ReadLine());
+                switch (input2)
+                {
+                    case 'a':
+                    case 'i':
+                    case 'e':
+                    case 'o':
+                    case 'u':
+                        aa++; break;
 
-
-                if (num4 < secretNumber)
-
-                { Console.Write("예상 숫자가 너무 작습니다"); }
-
-                else if (num4 > secretNumber)
-
-                { Console.Write("예상 숫자가 너무 큽니다"); }
-
-                else
-
-                break; 
-
-
-
-
-                if (num4 == secretNumber)
-
-                { Console.Write("예상한 숫자" + num4 + "는 정답입니다"); }
-                else
-
-                    Console.Write("컴퓨터가 생각한 숫자는" + secretNumber + "입니다");
-
-
+                    default:
+                        bb++;
+                        break;
+                }
+                Console.WriteLine("자음의 수");
+                Console.WriteLine("모음의 수");
             }
-            
-            
         }
-    }
-
-
-
-
+            }
+        }
     
-
-
-    
-}
