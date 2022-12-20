@@ -247,6 +247,8 @@ namespace test4
             Console.WriteLine("1부터 10까지의 정수의 합= {0}", sumNumber);
 
             */
+
+            /*
             int sumNumber = 1;
 
 
@@ -257,6 +259,97 @@ namespace test4
             }
             Console.WriteLine($"1부터 10까지의 정수의 합={sumNumber}");
             Console.WriteLine("1부터 10까지의 정수의 합= {0}", sumNumber);
+
+
+            */
+            /*
+            int sumnumber = 0;
+            for(Index=1; Index<=100;Index++)
+                if(Index % 3 == 0) { /*do nothing}
+                else { sumnumber += Index;
+                }*/
+
+
+
+
+            /*
+             break 문
+            break문은 반복 루프를 벗어나기 위해서 사용한다. break 문이 실행되면 반복 루프는 즉시 중단되고 반복 루프 다음에 있는 문장이 실행된다.
+
+            continue 문
+            continue 문은 현재 수행하고 있는 반복과정의 나머지를 건너 뛰고 다음 반복 과정을 강제적으로 시작하게 만든다
+            반복루프에서 continue 문은 만나게되면 continue 문 다음에 있는 후속코드들은 실행되지 않고 건너 뛰게 된다.
+
+            */
+            /*
+            for(int index = 1; index <= 10; index++)
+            {
+                if (index == 4) { break:}
+                Console.WriteLine("현재 인덱스: {0}", index);
+            }
+            */
+            /*
+            Console.WriteLine("입력할 정수의 수");
+            int count = 0;
+            int avg = 0;
+            int.TryParse(Console.ReadLine(), out count);
+            int div = count;
+            while(count>0)
+            {
+                int number5 = int.Parse(Console.ReadLine());
+                if(number5 > 0&& number5 <=0)
+                {
+                    avg += number5;
+                    count--;
+                }
+                else
+                {
+                    Console.WriteLine("입력할 수");
+                }
+
+                float aswer = (float)avg / (float)div;
+                Console.WriteLine("입력한 수의 평균" + aswer + "\n" + "\n" + "\n" + "\n");
+            }
+
+            */
+            /*
+            int aa = 0;//모음
+            int bb = 0;//자음
+            int cc = 0;
+
+            Console.WriteLine("영문자를 입력");
+            string line = Console.ReadLine();
+            cc += int.Parse(line);
+
+            while (0 > cc)
+                {
+                    switch (cc)
+                    {
+                        case 'a':
+                        case 'i':
+                        case 'e':
+                        case 'o':
+                        case 'u':
+                            aa++; break;
+
+                        default:
+                            bb++;
+                            break;
+                    }
+                Console.WriteLine("자음의 수");
+                Console.WriteLine("모음의 수");
+            }
+
+            */
+
+            Console.WriteLine("숫자를 입력해 주세요");
+
+            string line = Console.ReadLine();
+
+            int.Parse(line);
+
+            Console.WriteLine("입력한 수식"+(line+222));
+
 
         }
 
