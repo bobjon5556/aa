@@ -1,1 +1,19 @@
-git push aa +main
+ int sum = 0;
+
+            while (true)
+            {
+                Console.Write("수를 입력하세요: ");
+                string line = Console.ReadLine();
+                if (line == "end") break;
+                sum += int.Parse(line);
+            }
+
+            Console.WriteLine("평균값 " + sum/);
+        }
+
+
+while (num=userinput) // num보다 100이 크면 계속 반복
+            {
+                if (num == 40) break; // num이 40이면 break로 인해 반복 탈출
+                Console.WriteLine("num: " + num);
+                num++; // num의 값 1 증가
