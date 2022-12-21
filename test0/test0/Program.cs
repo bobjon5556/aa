@@ -6,29 +6,40 @@
         {
             {
 
-                int a = 0;
-                int b = 0;
-                int userinput= 0;
+                int userinput = 0;
 
 
                 userinput = int.Parse(Console.ReadLine());
 
-                for (int c = 0; c < userinput; c++)
+                for (int a = 0; a < userinput; a++)
 
                 {
-                    for (int d = 0; d <= c; d++)
+                    for (int b = 0; b < (userinput - a - 1); b++)
                     {
+                        Console.Write(" ");
+                    }
+                    for (int e = 0; e <= a; e++)
+                    {
+
                         Console.Write("*");
 
-
                     }
-                    Console.WriteLine();
+                        for (int f = 0; f < a; f++)
+                        {
+
+                            Console.Write("*");
+
+                        }
+                        Console.WriteLine();
+
+
+                    
+
+
                 }
 
-               
             }
 
         }
-        
     }
 }
