@@ -7,33 +7,34 @@ namespace baekjoon
     {
         static void Main(string[] args)
         {
-            int aa = 0;//모음
-            int bb = 0;//자음
-            int cc = 0;
+            Random random = new Random();
 
-            Console.WriteLine("영문자를 입력");
-            string input = Console.ReadLine();
-            int input2 = Int32.Parse(input);
+            int N = Convert.ToInt32(Console.ReadLine());
 
-            while (true)
+            bool[] selected = Enumerable.Repeat<bool>(false, N).ToArray<bool>();
+            int selectedCnt = 0;
+
+            while (selectedCnt < N)
             {
-                switch (input2)
+                int a = random.Next(0, N); // 1에서 N-1까지
+                if (selected[a] == true)
                 {
-                    case 'a':
-                    case 'i':
-                    case 'e':
-                    case 'o':
-                    case 'u':
-                        aa++; break;
-
-                    default:
-                        bb++;
-                        break;
+                    continue;
                 }
-                Console.WriteLine("자음의 수");
-                Console.WriteLine("모음의 수");
+
+                Console.Write($"{a} ");
+                selected[a] = true;
+                selectedCnt++;
             }
         }
-            }
-        }
+
+    }
+            
+        
+}
+           
+    
+
+       
+
     
