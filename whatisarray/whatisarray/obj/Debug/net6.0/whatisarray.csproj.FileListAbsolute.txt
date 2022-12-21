@@ -1,0 +1,15 @@
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\whatisarray.csproj.AssemblyReference.cache
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\whatisarray.GeneratedMSBuildEditorConfig.editorconfig
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\whatisarray.AssemblyInfoInputs.cache
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\whatisarray.AssemblyInfo.cs
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\whatisarray.csproj.CoreCompileInputs.cache
+D:\kimjoohyen\whatisarray\whatisarray\bin\Debug\net6.0\whatisarray.exe
+D:\kimjoohyen\whatisarray\whatisarray\bin\Debug\net6.0\whatisarray.deps.json
+D:\kimjoohyen\whatisarray\whatisarray\bin\Debug\net6.0\whatisarray.runtimeconfig.json
+D:\kimjoohyen\whatisarray\whatisarray\bin\Debug\net6.0\whatisarray.dll
+D:\kimjoohyen\whatisarray\whatisarray\bin\Debug\net6.0\whatisarray.pdb
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\whatisarray.dll
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\refint\whatisarray.dll
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\whatisarray.pdb
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\whatisarray.genruntimeconfig.cache
+D:\kimjoohyen\whatisarray\whatisarray\obj\Debug\net6.0\ref\whatisarray.dll
