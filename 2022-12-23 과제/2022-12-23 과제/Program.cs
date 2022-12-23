@@ -68,11 +68,11 @@
             
             int[] days = new int[12] { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-            int[] month1 = new int[12] {1,2,3,4,5,6,7,8,9,10,11,12 };
+            int[] month1 = new int[12];
 
-            for (int i=0;i<13 ;i++ )
+            for (int i=0;i<12 ;i++ )
             {
-
+                month1[i] = i+1;
                 Console.WriteLine("{0}월은"+"{1}까지입니다.",month1[i], days[i]);
 
                 
