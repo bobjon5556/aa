@@ -65,8 +65,8 @@ namespace test0
                 {
                     Console.Write("숫자를 입력하세요 : ");//입력 안내문
 
-                    string input = Console.ReadLine();//숫자 입력창
-                    int number = Int32.Parse(input);
+                    string input2 = Console.ReadLine();//숫자 입력창
+                    int number = Int32.Parse(input2);
 
                     if (0 < secretNumber)//0이상의 정수를 입력하면 실행
                     {
@@ -121,8 +121,8 @@ namespace test0
 
                     Console.WriteLine(secretNumber3);
 
-                    string input = Console.ReadLine();//숫자 입력창
-                    int number = Int32.Parse(input);
+                    string input3 = Console.ReadLine();//숫자 입력창
+                    int number = Int32.Parse(input3);
 
                     if (0 < secretNumber)//0이상의 정수를 입력되면 실행
                     {
