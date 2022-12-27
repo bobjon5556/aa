@@ -104,22 +104,9 @@
                 return 0;
             }
 
-            /* https://ehpub.co.kr
-       언제나 C언어 예제 Center
-       3X3 퍼즐 만들기
-    */
+      
 
-# include
-# include
-# include
-# include
-
-#define LEFT 75
-#define RIGHT 77
-#define UP 72
-#define DOWN 80
-#define SWAP(x,y) {int temp=x; x=y; y=temp;}
-
+# 
             typedef struct Puzzle
         {
             char base[3][3];
