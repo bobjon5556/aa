@@ -1,0 +1,37 @@
+두 수의 합을 구하는 함수 작성
+함수를 사용하여 큰값 작은 값 절댓값 구하기
+
+3개의 정수 중에서 최대 값을 찾는 함수 maximum(x,y,z)를 정의할것
+
+다른 두 변이 주어졌을 떄 직각 삼각형의 빗변을 계산하는 함수 Hypot()을 정의할것
+-매개변수는 2개 타입은 double 형
+-리턴타입도 double형
+
+주어진 숫자가 소수인지 여부를 찾는 함수 prime()를 잘성
+-판별할 값의 점위는 2~100사이의 값에서 소수는 모두 출력
+
+bool isPirme = true;
+for(int index=true;
+for(int index = number -1;2<=index; index--)
+{
+if(number % index==0)
+{
+is Prime = false;
+break;
+}
+else{continue;}
+}
+return isPrime;
+}
+
+화면에 "Hello"를 출력하는 sayHello()함수를 작성
+-int타입 매개변수 받아서 그 횟수만큼 "Hello"를 반복해서 출력
+
+사용자가 입력하는 전화번호에서 소괄호를 삭제한 형태로 출력하는 프로그램을 함수를 사용해서 작성
+-전화번호를 입력받는다._>소괄호를 삭제한 형태로 출력
+quit입력하면 프로그램 종료
+-프로그램 종료 전까지 입력받는다.
+
+
+1.슬라이딩 퍼즐게임 구현하기
+

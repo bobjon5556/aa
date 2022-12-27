@@ -1,29 +1,62 @@
-﻿using System.Drawing;
-using System.Xml.Linq;
-using System;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Intrinsics.X86;
+using System.Text;
+using System.Threading.Tasks;
 
-
-public class Monster 
+namespace WhatIsFunction
 {
-    public void main()
+    internal class Program1
     {
-        int i, j, k;
-        int num;
-        num = int.Parse(Console.ReadLine());
 
-        for (i = 0; i < num; i++)
+        static void Main()
         {
-            for (j = 0; j < (num - i - 1); j++)
+            string[,] stringArray = new string[3, 3];
+
+            stringArray[0, 0] = "1";
+            stringArray[0, 1] = "2";
+            stringArray[0, 2] = "3";
+            stringArray[1, 0] = "4";
+            stringArray[1, 1] = "5";
+            stringArray[1, 2] = "6";
+            stringArray[2, 0] = "7";
+            stringArray[2, 1] = "8";
+            stringArray[2, 2] = "X";
+
+            while (true)
             {
-                Console.Write(" ");
+                for (int i = 0; i < 3; i++)
+                {
+                    Console.Write("{0}", stringArray[0, i]);
+                }
+                Console.WriteLine();
+                for (int i = 0; i < 3; i++)
+                {
+                    Console.Write("{0}", stringArray[1, i]);
+                }
+                Console.WriteLine();
+                for (int i = 0; i < 3; i++)
+                {
+                    Console.Write("{0}", stringArray[2, i]);
+                }
+                Console.WriteLine();
+
+                break;
+
+                
+                
             }
-            for (k = 0; k <= i; k++)
-            {
-                Console.Write("*");
-            }
-            Console.WriteLine();
+            Console.WriteLine("키를 입력해주세요");
+
+
+
+            
         }
+
+
         
+
     }
 }
 
