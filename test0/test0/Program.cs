@@ -9,53 +9,67 @@ namespace WhatIsFunction
 {
     internal class Program1
     {
+        static char Image;
 
-        static void Main()
+
+        private void IntializeCardOpened()
         {
-            string[,] stringArray = new string[3, 3];
-
-            stringArray[0, 0] = "1";
-            stringArray[0, 1] = "2";
-            stringArray[0, 2] = "3";
-            stringArray[1, 0] = "4";
-            stringArray[1, 1] = "5";
-            stringArray[1, 2] = "6";
-            stringArray[2, 0] = "7";
-            stringArray[2, 1] = "8";
-            stringArray[2, 2] = "X";
-
-            while (true)
-            {
-                for (int i = 0; i < 3; i++)
-                {
-                    Console.Write("{0}", stringArray[0, i]);
-                }
-                Console.WriteLine();
-                for (int i = 0; i < 3; i++)
-                {
-                    Console.Write("{0}", stringArray[1, i]);
-                }
-                Console.WriteLine();
-                for (int i = 0; i < 3; i++)
-                {
-                    Console.Write("{0}", stringArray[2, i]);
-                }
-                Console.WriteLine();
-
-                break;
-
-                
-                
-            }
-            Console.WriteLine("키를 입력해주세요");
-
-
-
-            
+            for (int i = 0; i <= 52; i++)
+                cardOpened[i] = false;
         }
 
+        // [4, 13]으로 grid를 나눔
+        private void CardSlot()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                RowDefinition row = new RowDefinition();
+                board.RowDefinitions.Add(row);
+            }
+            for (int i = 0; i < 13; i++)
+            {
+                ColumnDefinition col = new ColumnDefinition();
+                board.ColumnDefinitions.Add(col);
+            }
+        }
 
-        
+        // card를 random 하게 배치
+        private void RandomCards()
+        {
+            int[] flag = new int[53];
+            Random r = new Random();
+
+            for (int row = 0; row < 4; row++)
+                for (int col = 0; col < 13; col++)
+                {
+                    int n = r.Next(1, 53);
+                    while (flag[n] != 0)
+                        n = r.Next(1, 53);
+                    flag[n] = 1;
+                    cards[row, col] = n;
+                }
+        }
+
+        // 전체 카드를 그려줌
+        private void DrawBoard()
+        {
+            for (int row = 0; row < 4; row++)
+                for (int col = 0; col < 13; col++)
+                {
+                    DrawCard(row, col, cards[row, col], cardOpened[cards[row, col]]);
+                }
+        }
+        static void Main()
+        {
+            IntializeCardOpened();      // 카드를 모드 hidden으로 표시 
+            CardSlot();                      // grid를 [4,13] 으로 나누어 줌
+            RandomCards();              // 카드를 랜덤하게 위치시킴
+            DrawBoard();                  // 카드를 그려줌
+        }
+            
+
+
+       
 
     }
 }

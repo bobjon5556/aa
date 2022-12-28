@@ -1,0 +1,244 @@
+#include <iostream>
+#include <time.h>
+
+using namespace std;
+
+struct card
+{
+	int Num;
+	char Image;
+};
+
+
+
+void main()
+{
+	srand(time(NULL));
+	int i, j;
+	int count = 0;
+	int A, B;
+	card cardSet[52];
+	card temp;
+	int fullCount = 52;
+	char YesNo;
+	int N=0;
+	int minMoney = 100000;
+	int myMoney = 1000000;
+	int btMoney = 0;
+
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 13; j++)
+		{
+			if (i == 0)
+			{
+			cardSet[count]= "◆";
+			}
+			else if (i == 1)
+			{
+				cardSet[count].Image = "♥";
+			}
+			else if (i == 2)
+			{
+				cardSet[count].Image = "♠";
+			}
+			else if (i == 3)
+			{
+				cardSet[count].Image = "♣";
+			}
+			cardSet[count].Num = j+1;
+			count++;
+		}
+	}
+
+	//셔플
+	for (i = 0; i < 100; i++)
+	{
+		A = rand() % 52;
+		B = rand() % 52;
+
+		temp = cardSet[A];
+		cardSet[A] = cardSet[B];
+		cardSet[B] = temp;
+	}
+
+	cout << " 카드가 준비 되었습니다. " << endl;
+	while (true)
+	{
+		cout << " ----- ----- ----- ----- " << endl;
+		cout << " 남은 카드 수 : " << fullCount << endl;
+		cout << " 나의 잔고 : " << myMoney << endl;
+		cout << " 첫번째 카드를 뽑으시겠습니까? ( y , n ) " << endl;
+		cout << " - > ";
+		cin >> YesNo;
+		if (YesNo == 'y')
+		{
+			cout << " 첫번째 카드 : " << cardSet[N].Image << cardSet[N].Num << endl;
+			fullCount--;
+		}
+		else if (YesNo == 'n')
+		{
+			system("cls");
+			continue;
+		}
+		YesNo = 'a';
+
+		system("cls");
+		cout << " ----- ----- ----- ----- " << endl;
+		cout << " 남은 카드 수 : " << fullCount << endl;
+		cout << " 나의 잔고 : " << myMoney << endl;
+		cout << " 첫번째 카드 : " << cardSet[N].Image;
+
+		if ( cardSet[N].Num == 1 )
+		{
+			cout << "A" << endl;
+		}
+		else if ( cardSet[N].Num == 11 )
+		{
+			cout << "J" << endl;
+		}
+		else if ( cardSet[N].Num == 12 )
+		{
+			cout << "Q" << endl;
+		}
+		else if ( cardSet[N].Num == 13 )
+		{
+			cout << "K" << endl;
+		}
+		else
+		{
+			cout << cardSet[N].Num << endl;
+		}
+		
+		cout << " 두번째 카드를 뽑으시겠습니까? ( y , n ) " << endl;
+		cout << " - > ";
+		cin >> YesNo;
+		if (YesNo == 'y')
+		{
+			cout << "두번째 카드 : " << cardSet[N + 1].Image << cardSet[N + 1].Num << endl;
+			fullCount--;
+		}
+		else if (YesNo == 'n')
+		{
+			system("cls");
+			fullCount++;
+			continue;
+		}
+		YesNo = 'a';
+
+		system("cls");
+		cout << " ----- ----- ----- ----- " << endl;
+		cout << " 남은 카드 수 : " << fullCount << endl;
+		cout << " 나의 잔고 : " << myMoney << endl;
+		cout << " 첫번째 카드 : " << cardSet[N].Image;
+
+		if ( cardSet[N].Num == 1 )
+		{
+			cout << "A" << endl;
+		}
+		else if ( cardSet[N].Num == 11 )
+		{
+			cout << "J" << endl;
+		}
+		else if ( cardSet[N].Num == 12 )
+		{
+			cout << "Q" << endl;
+		}
+		else if ( cardSet[N].Num == 13 )
+		{
+			cout << "K" << endl;
+		}
+		else
+		{
+			cout << cardSet[N].Num << endl;
+		}
+
+		cout << " 두번째 카드 : " << cardSet[N+1].Image;
+
+		if ( cardSet[N+1].Num == 1 )
+		{
+			cout << "A" << endl;
+		}
+		else if ( cardSet[N+1].Num == 11 )
+		{
+			cout << "J" << endl;
+		}
+		else if ( cardSet[N+1].Num == 12 )
+		{
+			cout << "Q" << endl;
+		}
+		else if ( cardSet[N+1].Num == 13 )
+		{
+			cout << "K" << endl;
+		}
+		else
+		{
+			cout << cardSet[N+1].Num << endl;
+		}
+		while (1)
+		{
+		cout << " 최소 배팅 금액 : " << minMoney << endl;
+		cout << " 배팅 금액 입력 : ";
+		cin >> btMoney;
+		cout << " 나의 카드 : " << cardSet[N + 2].Image << cardSet[N + 2].Num << endl;
+		cout << " ----- ----- ----- ----- " << endl;
+		if (cardSet[N].Num > cardSet[N + 2].Num && cardSet[N + 1].Num < cardSet[N + 2].Num ||
+			cardSet[N].Num < cardSet[N + 2].Num && cardSet[N + 1].Num > cardSet[N + 2].Num)
+		{
+			cout << " 승리 하셨습니다. " << endl;
+			myMoney += btMoney;
+			cout << " 배팅 금액의 2배를 얻으셨습니다! (" << btMoney * 2 << ")" << endl;
+			cout << " 현재 잔고 : " << myMoney << endl << endl;;
+		}
+		else
+		{
+			cout << " 패배 하였습니다. " << endl;
+			myMoney -= btMoney;
+			cout << " 배팅 금액을 잃어버리셨습니다! (" << btMoney << ")" << endl;
+			cout << " 현재 잔고 : " << myMoney << endl <<endl;
+		}
+		fullCount--;
+		N += 3;
+		if ( myMoney > 5000000 )
+		{
+			cout << " 목표 달성 500만원! 성공! " << endl;
+			break;
+			break;
+		}
+
+		if (N == 51)
+		{
+			cout << " 필요한 카드 수 3개보다 적습니다. " << endl;
+			break;
+			break;
+		}
+
+		if (myMoney < minMoney)
+		{
+			cout << " 보유한 돈이 최소 배팅 금액보다 적습니다. " << endl;
+			cout << " 게임을 종료합니다. " << endl;
+			exit(1);
+		}
+
+		cout << " 계속 진행하시겠습니까? ( y  , n ) " << endl;
+		cout << " -> ";
+		cin >> YesNo;
+		if ( YesNo = 'y' )
+		{
+			system("cls");
+			break;
+		}
+		else if ( YesNo = 'n' )
+		{
+			cout << " " << myMoney << "원을 가지고 집으로 돌아가다." << endl;
+			
+		}
+		else
+		{
+			cout << " 잘못 입력하셨습니다. 강제종료입니다. " << endl;
+			exit(1);
+		}
+		system("cls");
+		}
+	}
+} 
