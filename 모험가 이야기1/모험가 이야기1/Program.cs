@@ -1,4 +1,6 @@
-﻿namespace 모험가_이야기1
+﻿using text_rpg_2;
+
+namespace 모험가_이야기1
 {
 
 
@@ -7,71 +9,75 @@
 
     internal class Program
     {
+       
+
+        static void CreatePlayer(int choice)
+        {
+            Poketmon001 이상해씨 = new Poketmon001();
+            Poketmon004 파이리 = new Poketmon004();
+            Poketmon007 꼬부기 = new Poketmon007();
 
 
-        class open
-        { }
-        class close
-        { }
 
+            switch (choice)
+            {
 
-        class tron
-        { }
+                case 1:Console.WriteLine("당신은 {0}를 선택하셨습니다.",이상해씨.name);
+                    이상해씨.hp = 45;
+                    이상해씨.Damage = 49;
+                    이상해씨.defence = 49;
+                    이상해씨.specealDamage = 65;
+                    이상해씨.specealDefence = 65;
+                    이상해씨.speed = 45;
+                    break;
+                case 2:Console.WriteLine("당신은 {0}를 선택하셨습니다.");
+                    파이리.hp = 45;
+                    파이리.Damage = 49;
+                    파이리.defence = 49;
+                    파이리.specealDamage = 65;
+                    파이리.specealDefence = 65;
+                    파이리.speed = 45;
+                    break;
+                case 3:Console.WriteLine("당신은 꼬부기를 선택하셨습니다.");
+                    꼬부기.hp = 45;
+                    꼬부기.Damage = 49;
+                    꼬부기.defence = 49;
+                    꼬부기.specealDamage = 65;
+                    꼬부기.specealDefence = 65;
+                    꼬부기.speed = 45;
+                    break;
+                default:
+
+                    break;
+            }
+        }
+
 
 
 
         static void Main(string[] args)
         {
 
-            int 체력 = 100;
-            int 방어력 = 20;
-            int 공격력 = 20;
-
-            int 적체력 = 50;
-            int 적방어력 = 10;
-            int 적공격력 = 10;
-
-            int 선택 = 0;
-            int 임시 = 0;
-
-
             Console.WriteLine("Hello, World!");
             Console.ReadKey();
 
             {
                 Console.WriteLine("직업을 선택하세요");
-                Console.WriteLine("[1] 기사");
-                Console.WriteLine("[2] 궁수");
-                Console.WriteLine("[3] 전사");
+                Console.WriteLine("[1] 이상해씨");
+                Console.WriteLine("[2] 파이리");
+                Console.WriteLine("[3] 꼬부기");
 
                 string input1 = Console.ReadLine();
                 int choice = Convert.ToInt32(input1);
-
-                for (; ; )
-                {
-                    if (choice > 0)
-                    {
-                        switch (input1)
-                        {
-                            case "1":
-                                Console.WriteLine("기사입니다");
-                                break;
-                            case "2":
-                                Console.WriteLine("궁수입니다");
-                                break;
-                            case "3":
-                                Console.WriteLine("전사입니다");
-                                break;
-                        }
-
-                    }
+                
+                CreatePlayer(choice);
 
 
 
                     while (true)
                     {
 
-                        Console.WriteLine("기사입니다{0} 적의 체력{1}", 체력, 적체력);
+                        Console.WriteLine("기사입니다{0} 적의 체력{1}", 이상해씨.hp, 구구.hp);
                         Console.WriteLine("1.공격합니다.");
                         Console.WriteLine("2.방어합니다.");
 
@@ -113,7 +119,7 @@
                     }
                     
 
-                }
+                
             }
 
 

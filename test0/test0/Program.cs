@@ -9,21 +9,38 @@ namespace WhatIsFunction
 {
     internal class Program1
     {
-        static char Image;
 
+        static char Image;
+        static int[] cardSet = new int[52];
 
         private void IntializeCardOpened()
         {
             for (int i = 0; i <= 52; i++)
+                
                 cardOpened[i] = false;
         }
 
         // [4, 13]으로 grid를 나눔
+        
+        private int[] trumpCardSet;//내가 사용할 카드세트
+        private string[] trumpCardMark;//트럼프카드 마크
+        public void SetupTrumpCards()
+        {
+            trumpCardSet = new int[52];
+            for (int i = 0; i < trumpCardSet.Length; i++)
+            {
+                trumpCardSet[i] = i + 1;
+                Console.Write("{0}", trumpCardSet[i]);
+                //ioop 카드를 셋업하는 루프
+                //Setuptrumpcard()
+            }
+            trumpCardMark = new string[4] { "♥", "♠", "◈", "♣" };
+        }
         private void CardSlot()
         {
             for (int i = 0; i < 4; i++)
             {
-                RowDefinition row = new RowDefinition();
+                int row = new RowDefinition[i];
                 board.RowDefinitions.Add(row);
             }
             for (int i = 0; i < 13; i++)
@@ -32,26 +49,30 @@ namespace WhatIsFunction
                 board.ColumnDefinitions.Add(col);
             }
         }
-
-        // card를 random 하게 배치
-        private void RandomCards()
+        //셔플
+        public void Suffle()
         {
-            int[] flag = new int[53];
-            Random r = new Random();
+            for (int i = 0; i < 100; i++)
+            {
+                int A = 0;
+                int B = 0;
+                int temp;
 
-            for (int row = 0; row < 4; row++)
-                for (int col = 0; col < 13; col++)
-                {
-                    int n = r.Next(1, 53);
-                    while (flag[n] != 0)
-                        n = r.Next(1, 53);
-                    flag[n] = 1;
-                    cards[row, col] = n;
-                }
-        }
+                Random rand = new Random();
 
-        // 전체 카드를 그려줌
-        private void DrawBoard()
+                A = rand.Next(0, 52);
+                B = rand.Next(0, 52);
+
+
+
+                temp = cardSet[A];
+                cardSet[A] = cardSet[B];
+                cardSet[B] = temp;
+            }
+
+
+            // 전체 카드를 그려줌
+            private void DrawBoard()
         {
             for (int row = 0; row < 4; row++)
                 for (int col = 0; col < 13; col++)

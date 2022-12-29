@@ -237,7 +237,7 @@ namespace whatisstricture
             Console.WriteLine();
 
             trumpCard.SetupTrumpCards();
-            trumpCard.ShuffleCards();
+            trumpCard.ShuffleCards(200);
             trumpCard.printcheck();
             trumpCard.RollCard();
             trumpCard.reroll();
