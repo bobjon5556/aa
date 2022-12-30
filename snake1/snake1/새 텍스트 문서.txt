@@ -1,0 +1,104 @@
+using namespace std;
+
+
+// 시계방향
+enum DIRECTION {
+  RIGHT,
+  DOWN,
+  LEFT,
+  UP
+};
+
+enum MAP {
+  EMPTY,
+  APPLE,
+  //SNAKE
+};
+
+const int dir[][2] = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };  //y, x
+
+int arr[100][100];
+int current_direction = DIRECTION::RIGHT;
+int elapsed = 0;
+bool endflag = false;
+
+int main(int argc, char** argv)
+{
+#ifndef ONLINE_JUDGE
+  freopen("input.txt", "r", stdin);
+#endif
+
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
+
+  int n, k, l;
+  cin >> n >> k;
+
+  int a, b;
+  for (int i = 0; i < k; ++i) {
+    cin >> a >> b;
+    arr[a - 1][b - 1] = MAP::APPLE;
+  }
+
+  cin >> l;
+  vector<pair<int, bool>> turns;  //sec, is_clockwise
+  turns.reserve(l);
+  char c;
+  for (int i = 0; i < l; ++i) {
+    cin >> a >> c;
+    turns.push_back(make_pair(a, c=='D'));
+  }
+
+  deque<pair<int, int>> snake;  //front 머리 back 꼬리, y, x
+  snake.push_back(make_pair(0, 0));
+
+  while (true) {
+    if (endflag) break;
+    
+    ++elapsed;
+
+
+    // move
+    pair<int, int> next_move = snake.front();
+    next_move.first += dir[current_direction][0];
+    next_move.second += dir[current_direction][1];
+    snake.push_front(next_move);
+
+    // wall?
+    if (!(next_move.first >= 0 && next_move.first < n && next_move.second >= 0 && next_move.second < n)) {
+      break;
+    }
+
+    // snake body check
+    for (int i = 1; i < snake.size(); ++i) {
+      if (snake[i] == next_move) {
+        endflag = true;
+        break;
+      }
+    }
+
+    // empty
+    if (arr[next_move.first][next_move.second] != MAP::APPLE) {
+      snake.pop_back();
+    }
+    else {
+      // 사과 먹은거 처리
+      arr[next_move.first][next_move.second] = MAP::EMPTY;
+    }
+    
+    // turn
+    for (auto& t : turns) {
+      if (t.first == elapsed) {
+        if (t.second)
+          current_direction = (current_direction + 1) % 4;
+        else
+          current_direction = (current_direction == 0 ? 3 : current_direction - 1);
+      }
+    }
+  }
+
+  cout << elapsed;
+
+
+  return 0;
+}
